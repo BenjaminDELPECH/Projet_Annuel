@@ -1,4 +1,4 @@
-test
+
 <?php 
 //permet de recuper  $_SESSION
 session_start();
