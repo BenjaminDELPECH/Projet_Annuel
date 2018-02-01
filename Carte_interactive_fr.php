@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Choix de la langue</title>
+	<title>Choix de la langueee</title>
 	<link rel="stylesheet" href="projet_annuel.css">
 
 <script type="text/javascript" src="mapper.js"></script>
