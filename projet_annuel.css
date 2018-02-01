@@ -1,0 +1,91 @@
+body{margin: 0;
+	background-color:#3366DD;
+	font-family:"Comic Sans MS", "Comic Sans", cursive;}
+
+	input{width:130px;}
+ 
+ .div_centrale{
+   margin-left: auto;
+	margin-right: auto;
+	width:50%;
+	
+	border:0px solid black;
+}
+
+.text1{
+	width:200px;
+	margin-top:20%;
+	margin-left: auto;
+	margin-right: auto;
+	 border:0px solid black;
+	}
+	
+.buttonlangue{
+	margin-top:10px;
+	width:180px;
+	display:block;
+	border:2px solid WHITE;
+		margin-left: auto;
+	margin-right: auto;
+	padding-top:15px;padding-bottom:15px;
+}
+.login_central{
+	Width:20%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:80px;
+	
+}
+.buttonretour{
+	margin-top:10px;
+	margin-left:10px;
+	border-radius:4%;
+	width:130px;
+	display:block;
+	border:2px solid WHITE;
+		
+	padding-top:15px;padding-bottom:15px;
+}
+.buttonretour:hover{
+	border:2px solid blue;
+	
+}
+
+.buttonlangue:hover{
+	border:2px solid blue;
+	
+}
+
+.buttonadmin{
+	margin-top:70px;
+	width:120px;
+	display:block;
+	border:2px solid WHITE;
+		float:left;
+	padding-top:13px;padding-bottom:13px;
+}
+
+.buttonadmin:hover{
+	
+	border:2px solid blue;
+}
+
+.table_login_admin{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+	width:600px;
+	
+}
+
+
+.centrer {display:block;width:280px;margin-left:auto;margin-right:auto;}
+
+.buttonmenu{border:2px solid white;
+	background-color:white;
+	display:block;margin-left:auto;margin-right:auto;width:250px;margin-top:10px;padding-top:14px;padding-bottom:14px;}
+
+.buttonmenu:hover{border:2px solid blue;}
+
+.space_border5{width:100%;height:10;}
+.space_border20{width:100%;height:20px;}
