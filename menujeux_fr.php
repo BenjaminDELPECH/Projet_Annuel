@@ -60,21 +60,21 @@ if(isset($_GET['pseudo'])){
 	<div class="center div-style-1 background-2">	
 	<!-- contenu-->
 			<div style="">
-<nav class="mdl-navigation">
-<a class="mdl-navigation__link box-shadow-1" href="">Index</a>
-		
-		<button  onclick="window.location='Carteinteractive_fr.php'"
-			style="margin-top:10px;">Carte interactive(1)</button>
-			<button  onclick="window.location='pendu_fr.php'"
+
+
+	<button class="buttonmenu 
+	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonmenu background-1" onclick="window.location='Carteinteractive_fr.php'"
+			style="margin-top:10px;">Carte interactive</button>
+			<button class="buttonmenu" onclick="window.location='pendu_fr.php'"
 			style="">Jeu du Pendu(2)</button>
-			<button onclick="window.location='drapeaux_fr.php'"
+			<button class="buttonmenu" onclick="window.location='drapeaux_fr.php'"
 			style="">Jeu des drapeaux(3)</button>
-			<button  onclick="window.location='Quiz_fr.php'"
+			<button class="buttonmenu" onclick="window.location='Quiz_fr.php'"
 			style="">Quiz(4)</button>
-			<button  onclick="window.location='meilleurscores_fr.php'"
+			<button class="buttonmenu" onclick="window.location='meilleurscores_fr.php'"
 			style="">Meilleurs scores(5)</button>
 
-</nav>
+
 </div>
 	
 	
