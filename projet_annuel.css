@@ -1,25 +1,16 @@
 body{margin: 0;
-	background-color:#3366DD;
+	background-color:#dddddd;
 	font-family:"Comic Sans MS", "Comic Sans", cursive;}
 
 	input{width:130px;}
+ .center{margin: 0 auto;}
  
- .div_centrale{
-   margin-left: auto;
-	margin-right: auto;
-	width:50%;
-	
-	border:0px solid black;
-}
 
-.text1{
-	width:200px;
-	margin-top:20%;
-	margin-left: auto;
-	margin-right: auto;
-	 border:0px solid black;
-	}
-	
+.div-style-1{padding:50px;box-shadow:2px 4px 14px #222222;border-radius:3px;margin-top:100px;}
+.background-1{background-color:#0099EE;}
+.background-2{background-color:#EEEEEE;}
+
+.box-shadow-1{box-shadow:2px 2px 5px #dddddd;};
 .buttonlangue{
 	margin-top:10px;
 	width:180px;
