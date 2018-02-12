@@ -33,10 +33,10 @@
   </header>
   <div class="mdl-layout__drawer">
 		<nav class="mdl-navigation">
-        <a class="mdl-navigation__link box-shadow-1" href="">Index</a>
-        <a class="mdl-navigation__link box-shadow-1" href="">Changer la langue</a>
-        <a class="mdl-navigation__link box-shadow-1" href="">Changer de pseudo</a>
-        <a class="mdl-navigation__link box-shadow-1" href="">Admin</a>
+       
+        <a class="mdl-navigation__link box-shadow-1" href="index.php">Changer la langue</a>
+        <a class="mdl-navigation__link box-shadow-1" href="index_fr">Changer de pseudo</a>
+        <a class="mdl-navigation__link box-shadow-1" href="login_admin.php">Admin</a>
       </nav>
   </div>
   
@@ -54,7 +54,7 @@
 				Français
 			</button>
 			<button onclick="window.location='index_en.php'" 
-			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect background-1">
+			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect background-1" style="margin-left:4px;">
 				English
 			</button>
 			</div>
@@ -62,21 +62,8 @@
 	
 
 </div>
-			
-			
-			
-			
-			
-			
-		</div>
-			
-		
-		
-			
-			
-			
-		
-		</div>
+</div>
+</div>
 		
 		
 		

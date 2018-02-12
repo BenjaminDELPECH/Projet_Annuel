@@ -44,7 +44,7 @@
   </header>
   <div class="mdl-layout__drawer">
 		<nav class="mdl-navigation">
-        <a class="mdl-navigation__link box-shadow-1" href="">Index</a>
+       
         <a class="mdl-navigation__link box-shadow-1" href="index.php">Changer la langue</a>
         <a class="mdl-navigation__link box-shadow-1" href="index_fr">Changer de pseudo</a>
         <a class="mdl-navigation__link box-shadow-1" href="">Admin</a>
@@ -60,11 +60,11 @@
 				
 
 	<div style="">
-		<span style="font-size:20px;padding:7px;text-align:center;"class="centrer" >Veuillez entrer votre pseudo</span>
+		<span style="" class="centrer" >Veuillez entrer votre pseudo</span>
 
-		<form style="margin-top:15px;"class="centrer" method="get" action="menujeux_fr">
-			 <input type="text" name="pseudo"  maxlength="20" STYLE="float:left;"></input>
-			<input type="submit"  style="float:left;margin-left:3px;"></input>
+		<form style=""class="centrer" method="get" action="menujeux_fr">
+			 <input type="text" name="pseudo" style="font-size:22px;"  maxlength="20" STYLE="float:left;"></input>
+			<input type="submit"  style="float:right;margin-left:3px;width:50%;height:40px;"></input>
 		</form>
 		
 	</div>

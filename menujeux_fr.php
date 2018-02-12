@@ -8,13 +8,10 @@ if(isset($_GET['pseudo'])){
 
 	
 	$_SESSION['pseudo']=$_GET['pseudo'];
-}
-	
-	
-	?>
+}	?>
 
 
-
+<?php echo $_SESSION['pseudo'];?>
 
 <!DOCTYPE html>
 <html>
@@ -47,9 +44,8 @@ if(isset($_GET['pseudo'])){
   </header>
   <div class="mdl-layout__drawer">
 		<nav class="mdl-navigation">
-        <a class="mdl-navigation__link box-shadow-1" href="">Index</a>
-        <a class="mdl-navigation__link box-shadow-1" href="">Changer la langue</a>
-        <a class="mdl-navigation__link box-shadow-1" href="">Changer de pseudo</a>
+		<a class="mdl-navigation__link box-shadow-1" href="index.php">Changer la langue</a>
+        <a class="mdl-navigation__link box-shadow-1" href="index_fr">Changer de pseudo</a>
         <a class="mdl-navigation__link box-shadow-1" href="">Admin</a>
       </nav>
   </div>
@@ -65,14 +61,18 @@ if(isset($_GET['pseudo'])){
 	<button class="buttonmenu 
 	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonmenu background-1" onclick="window.location='Carteinteractive_fr.php'"
 			style="margin-top:10px;">Carte interactive</button>
-			<button class="buttonmenu" onclick="window.location='pendu_fr.php'"
-			style="">Jeu du Pendu(2)</button>
-			<button class="buttonmenu" onclick="window.location='drapeaux_fr.php'"
-			style="">Jeu des drapeaux(3)</button>
-			<button class="buttonmenu" onclick="window.location='Quiz_fr.php'"
-			style="">Quiz(4)</button>
-			<button class="buttonmenu" onclick="window.location='meilleurscores_fr.php'"
-			style="">Meilleurs scores(5)</button>
+			<button class="buttonmenu 
+	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonmenu background-1" onclick="window.location='pendu_fr.php'"
+			style="">Jeu du Pendu</button>
+			<button class="buttonmenu 
+	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonmenu background-1" onclick="window.location='drapeaux_fr.php'"
+			style="">Jeu des drapeaux</button>
+			<button class="buttonmenu 
+	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonmenu background-1" onclick="window.location='Quiz_fr.php'"
+			style="">Quiz</button>
+			<button class="buttonmenu 
+	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonmenu background-1" onclick="window.location='meilleurscores_fr.php'"
+			style="">Meilleurs scores</button>
 
 
 </div>
