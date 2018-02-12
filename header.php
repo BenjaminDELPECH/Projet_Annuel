@@ -1,18 +1,19 @@
 <?php session_start();
 
-//permet de recuper  $_SESSION
+//permet de recuper  d'utiliser $_SESSION
 session_start();
-
 
 if(isset($_GET['pseudo'])){
 	//Création d'une variable qui reste malgrès les changement de page
 	//Elle est perdue quand on ferme le naviguateur.
-
-	
-	$_SESSION['pseudo']=$_GET['pseudo'];
+$_SESSION['pseudo']=$_GET['pseudo'];
 
 }
-if(!isset($_SESSION['pseudo'])){header('location: page_pseudo_fr.php');}	?>
+
+if(isset($_GET['langue'])){
+	$_SESSION['langue']=$_GET['langue'];
+}
+?>
 
 	
 

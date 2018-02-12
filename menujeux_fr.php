@@ -1,8 +1,11 @@
 
- <?php include('header.php');?>
+
+<?php include('header.php');?>
+
+<?php include('restrictions.php');?>
    
    <!-- contenu-->
-	<?php include('cadre_menu_jeux.php');?>
+<?php include('cadre_menu_jeux.php');?>
 	
 <?php include('footer.php');?>
 		
