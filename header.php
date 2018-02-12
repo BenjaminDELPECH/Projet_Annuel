@@ -1,29 +1,63 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
-            mdl-layout--fixed-tabs mdl--top">
+<?php session_start();
+
+//permet de recuper  $_SESSION
+session_start();
+
+
+if(isset($_GET['pseudo'])){
+	//Création d'une variable qui reste malgrès les changement de page
+	//Elle est perdue quand on ferme le naviguateur.
+
+	
+	$_SESSION['pseudo']=$_GET['pseudo'];
+
+}
+if(!isset($_SESSION['pseudo'])){header('location: page_pseudo_fr.php');}	?>
+
+	
+
+<?php include('connexionBD.php');?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu</title>
+	<link rel="stylesheet" href="projet_annuel.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+<link rel="stylesheet" href="projet_annuel.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script type="text/javascript" src="mapper.js"></script>
+	<link rel="stylesheet" href="projet_annuel.css">
+</head>
+
+<body >
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <span class="mdl-layout-title">Title</span>
-    </div>
-    <!-- Tabs -->
-    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
-      <a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>
-      <a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="menujeux_fr.php">Jouer</a>
+      <a class="mdl-navigation__link" href="index.php">Langue</a>
+      <a class="mdl-navigation__link" href="page_pseudo_fr.php">Pseudo</a>
+	   <a class="mdl-navigation__link" href="page_login_admin.php">Admin</a>
+	  
+ 
+    </nav>
   </div>
   <main class="mdl-layout__content">
-    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-  </main>
-</div>
+  
+    <div class="mdl-grid">
+	
+	<!-- Your content goes here -->

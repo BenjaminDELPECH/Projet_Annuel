@@ -4,7 +4,7 @@
 			style="margin-top:10px;">Retour</button>
 	
 	<div class="mdl-cell mdl-cell--5-col center">
-	<?php include('form_changer_langue.php');?>
+	<?php include('form_changer_pseudo.php');?>
 	
 	</div>
   <?php include('footer.php');?>
