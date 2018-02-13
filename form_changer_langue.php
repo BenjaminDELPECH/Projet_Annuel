@@ -5,11 +5,11 @@
 			
 			<div style="margin-top:30px;">
 			<button onclick="window.location='menujeux_fr?langue=Fr.php'" 
-			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect background-1" >
+			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-1 color-t" >
 				Français
 			</button>
 			<button onclick="window.location='index_en?langue=En.php'" 
-			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect background-1" style="margin-left:4px;">
+			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-1 color-t" style="margin-left:4px;">
 				English
 			</button>
 			</div>

@@ -23,14 +23,14 @@ if(isset($_GET['langue'])){
 <html>
 <head>
 	<title>Menu</title>
-	<link rel="stylesheet" href="projet_annuel.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
-<link rel="stylesheet" href="projet_annuel.css">
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<script type="text/javascript" src="mapper.js"></script>
-	<link rel="stylesheet" href="projet_annuel.css">
+<link rel="stylesheet" href="css/material.min.css">
+<script defer src="js/material.min.js"></script>
+<script type="text/javascript" src="js/mapper.js"></script>
+	<link rel="stylesheet" href="css/projet_annuel.css">
 </head>
 
 <body >

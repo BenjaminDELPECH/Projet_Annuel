@@ -1,5 +1,5 @@
 
-
+<div class="mdl-cell mdl-cell-top" style="font-size:24px;"><center>Cliquez sur un pays !</center></div>
 
 <div class="mdl-cell Europe center" style="padding:30px;" >
 	 

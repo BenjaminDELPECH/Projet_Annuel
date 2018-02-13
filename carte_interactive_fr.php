@@ -7,6 +7,8 @@
 			style="margin-top:10px;">Retour</button>
 	
 	<div class="mdl-cell mdl-cell--10-col center">
+	
+	
 	<?php include('cadre_carte_interactive_fr.php');?>
 	
 	</div>
