@@ -15,8 +15,8 @@
 	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-2 color-t" onclick="window.location='drapeaux_fr.php'"
 			style="">Jeu des drapeaux</button>
 			<button class=" 
-	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-2 color-t" onclick="window.location='Quiz_fr.php'"
-			style="">Quiz</button>
+	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-2 color-t" onclick="window.location='Quizz_fr.php'"
+			style="">Quizz</button>
 			<button class="
 	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-2 color-t" onclick="window.location='meilleurscores_fr.php'"
 			style="">Meilleurs scores</button>

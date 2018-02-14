@@ -15,6 +15,12 @@ if(isset($_GET['langue'])){
 }
 ?>
 
+<?php 
+
+
+
+
+?>
 	
 
 <?php include('connexionBD.php');?>
