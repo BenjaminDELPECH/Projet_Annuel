@@ -34,7 +34,7 @@ if(isset($result)){
     <form action="" method="POST">
       
       <div id="name">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
     <input class="mdl-textfield__input" type="text" name="login">
     <label class="mdl-textfield__label" for="sample3">Nom de compte</label>
   </div>

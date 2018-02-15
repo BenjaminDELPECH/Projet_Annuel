@@ -8,7 +8,7 @@
 				Retour
 			</button>
 	
-	<div class="mdl-cell mdl-cell--5-col center">
+	<div class="mdl-cell mdl-cell--6-col center">
 	<?php include('cadre_login_admin.php');?>
 	
 	</div>

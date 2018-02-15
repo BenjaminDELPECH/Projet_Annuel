@@ -102,7 +102,7 @@ COLOR:white;
 
 
 .demo-card-wide.mdl-card {
-  
+  min-width:600px;
   
 }
 
@@ -160,7 +160,9 @@ margin-top: 10px;
 }
 
 .mdl-textfield {
-  width: 100px;
+  width: 150px;
   margin-right: 10px;
 }
+
+.widthLARGE{mIN-width:200px;}
 
