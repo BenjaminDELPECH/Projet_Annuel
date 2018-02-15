@@ -9,7 +9,7 @@
 	<div class="mdl-cell mdl-cell--10-col center">
 	
 	
-	<?php include('cadre_quizz_fr.php');?>
+	<?php include('cadre_pendu_fr.php');?>
 	
 	</div>
   <?php include('footer.php');?>
