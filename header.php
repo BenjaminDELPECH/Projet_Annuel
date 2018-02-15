@@ -6,7 +6,7 @@
 if(isset($_POST['pseudo'])){
 	//Création d'une variable qui reste malgrès les changement de page
 	//Elle est perdue quand on ferme le naviguateur.
-$_SESSION['pseudo']=$_GET['pseudo'];
+$_SESSION['pseudo']=$_POST['pseudo'];
 //creation d'un tableau coeff ou sont stockées tout les proba d'avoir tel ou telle quesiton
 
 for ($x = 1; $x <= 5; $x++) {
@@ -18,8 +18,8 @@ for ($x = 1; $x <= 5; $x++) {
 
 }
 
-if(isset($_GET['langue'])){
-	$_SESSION['langue']=$_GET['langue'];
+if(isset($_POST['langue'])){
+	$_SESSION['langue']=$_POST['langue'];
 }
 ?>
 

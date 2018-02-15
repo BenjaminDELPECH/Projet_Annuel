@@ -4,10 +4,12 @@
 			
 			
 			<div style="margin-top:30px;">
-			<button onclick="window.location='menujeux_fr?langue=Fr.php'" 
+			<form method="post" action="menujeux_fr.php">
+			<button type="submit"
 			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-1 color-t" >
 				Français
 			</button>
+			</form>
 			<button onclick="window.location='index_en?langue=En.php'" 
 			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-1 color-t" style="margin-left:4px;">
 				English
