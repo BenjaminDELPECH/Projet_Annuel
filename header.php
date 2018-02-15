@@ -1,12 +1,20 @@
 <?php session_start();
 
 //permet de recuper  d'utiliser $_SESSION
-session_start();
 
-if(isset($_GET['pseudo'])){
+
+if(isset($_POST['pseudo'])){
 	//Création d'une variable qui reste malgrès les changement de page
 	//Elle est perdue quand on ferme le naviguateur.
 $_SESSION['pseudo']=$_GET['pseudo'];
+//creation d'un tableau coeff ou sont stockées tout les proba d'avoir tel ou telle quesiton
+
+for ($x = 1; $x <= 5; $x++) {
+  
+  $_SESSION['coeff'][$x] = 1;
+ 
+}
+
 
 }
 
