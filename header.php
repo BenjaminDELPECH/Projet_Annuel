@@ -36,7 +36,7 @@ include('record_topscore.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>connard</title>
+	<title>Site educatif</title>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
