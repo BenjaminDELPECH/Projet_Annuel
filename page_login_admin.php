@@ -1,3 +1,9 @@
+<?php session_start();
+$_SESSION['title']="Login admin";
+?>
+
+
+
 <?php include('header.php');?>
 
 <?php if($_SESSION['admin_connected']==1){header('location:page_admin.php');} ?>

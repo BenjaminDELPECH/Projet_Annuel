@@ -2,63 +2,136 @@
 
 	
 
-<div id ="mycard">
+<div class="mdl-cell mdl-cell--7-col center demo-card-wide mdl-card mdl-shadow--2dp" style="height:auto;margin-top:15px;min-width:700px;">
+  <STYLE>
+  .mdl-textfield {
+  width: 202px;
+ 
+}
+  </style>
+  
+  
+  
+  
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Insèrer/modifier une question</h2>
+  </div>
+  
+    <div class="mdl-card__supporting-text">
 
-<div class="demo-card-wide mdl-card mdl-shadow--2dp ">
-  <div class="mdl-card__title color-t">
-    <h2 class="mdl-card__title-text ">Veillez rentrez vos identifiants</h2>
-  </div>
-  
-  
-  <div class="mdl-card__supporting-text">
-   
-   
-   
-    <form action="" method="POST">
+  <br><br>
+    
+	
+	<table>
+		
       
-      <div id="name">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label widthLARGE">
-    <input class="mdl-textfield__input" type="text" name="login">
-    <label class="mdl-textfield__label" for="sample3">Nom de compte</label>
-  </div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label widthLARGE">
-    <input class="mdl-textfield__input" type="text" name="password">
-    <label class="mdl-textfield__label" for="sample3">Mot de passe</label>
-  </div>
-      <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-3 color-t" value="INSERER"
-name="Inserer_quesiton_request" 	  >
+		<tbody>
+		<form method="POST" action="">
+		
+	
+	<tr><td> 
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"  style="width:250px;">
+    <input class="mdl-textfield__input" type="text" id="sample3" name="Question" VALUE="">
+    <label class="mdl-textfield__label" for="sample3">Question...</label>
+  </div></td>
+  
+    <td> 
+		<div class="mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label"  style="width:250px;">
+    <input class="mdl-textfield__input" type="text" id="sample3" name="Reponse" VALUE="">
+    <label class="mdl-textfield__label" for="sample3">Réponse..</label>
+  </div></td>
+  
+  
+	</tr>
+	
+	
+	
+	</tbody>
+	</table>
+ 
+	  <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-3 color-t" value="Inserer"
+name="insert_question" 	  >
+	</form>
+	  
+      
+    
+	  
   
 </input>
-	  
-	 
-     
 </form>
   </div>
   
   
+  <div class="mdl-card__supporting-text" STYLE="margin-top:15px;">
+  
+  <b>Modifier des pays</b>
+  <br><br>
+    
+
+      
+		
+		<form method="POST" action="">
+		<?php foreach($bdd->query("SELECT * FROM questions")as $result){	?>
+	<input type="hidden" name="IDQuestion" value="<?php echo $result['IDQuestion'];?>"></input>
+	
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:250px;">
+    <input class="mdl-textfield__input" type="text" id="sample3" name="Question" value="<?php echo $result['textquestion'];?>" >
+    
+  </div>
+  
+  
+		<div class="mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:250px;">
+    <input class="mdl-textfield__input" type="text" id="sample3" name="Reponse" value="<?php echo $result['reponse'];?>" >
+  
+  </div>
+			
+			
+ <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-4 color-t" value="Modifier" name="update_question">
+  
+</input>
+ <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-4 color-t" value="Supprimmer" name="delete_question">
+  
+</input>
+	
+	</form>
+	<?php } ?>
+	
+ 
+	  
+	  
+      
+    
+</form>
+  </div>
+  
+  <BR><BR>
+  
+
+  
+  
   
   
 </div>
-</div>
+
   <!-- FAB button with ripple -->
   
 </div>
 
 
 
-
-
-
-
-
-
-
-
-<div class="mdl-cell mdl-cell--7-col center demo-card-wide mdl-card mdl-shadow--2dp" style="height:auto;margin-top:15px;">
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="mdl-cell mdl-cell--9-col center demo-card-wide mdl-card mdl-shadow--2dp" style="height:auto;margin-top:15px;min-width:700px;">
   <STYLE>
   .mdl-textfield {
   width: 102px;
-  margin-right: 10px;
+ 
 }
   </style>
   
@@ -70,7 +143,7 @@ name="Inserer_quesiton_request" 	  >
   </div>
   
     <div class="mdl-card__supporting-text">
-<b>Indiquez les informations du Pays à ajouter</b>
+<b>Indiquez les informations du Pays à ajouter ( Population et PIB : 53,543,345 = 53M, 67,543 = 68K) (IDH : 0.8957 = 0.9)</b>
   <br><br>
     
 	
@@ -108,19 +181,19 @@ name="Inserer_quesiton_request" 	  >
   <td> 
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" id="sample3" name="DateEntreeUE"VALUE="">
-    <label class="mdl-textfield__label" for="sample3">DateEntreeUE...</label>
+    <label class="mdl-textfield__label" for="sample3">Année d'entrée UE...</label>
   </div></td>
   
   <td> 
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" id="sample3" name="PIB"VALUE="">
-    <label class="mdl-textfield__label" for="sample3">PIB...</label>
+    <label class="mdl-textfield__label" for="sample3">PIB/hab...</label>
   </div></td>
   
    <td> 
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" id="sample3" name="IDH">
-    <label class="mdl-textfield__label" for="sample3">IDH..</label>
+    <label class="mdl-textfield__label" for="sample3">IDH...</label>
   </div></td>
 	</tr>
 	
@@ -142,63 +215,53 @@ name="insert_pays" 	  >
   </div>
   
   
-  <div class="mdl-card__supporting-text" STYLE="overflow:auto;padding-right:50px;">
+  <div class="mdl-card__supporting-text" STYLE="margin-top:15px;">
   
-  <br>
+  <b>Modifier des pays</b>
+  <br><br>
     
-	
-	<table>
-		<thead style="  font-weight: bold;"><tr><td>Pays</td>
-				<td>Capitale</td>
-				<td>Langue</td>
-				<td>Population</td>
-				<td>DateEntreeUE</td>
-				<td>PIB</td>
-				<td>IDH</td></tr>
-				</thead>
+
       
-		<tbody>
+		
 		<form method="POST" action="">
 		<?php foreach($bdd->query("SELECT * FROM pays")as $result_pays){	?>
 	<input type="hidden" name="IDPays" value="<?php echo $result_pays['IDPays'];?>"></input>
-	<tr><td> 
+	
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" name="NomPays" value="<?php echo $result_pays['NomPays'];?>" >
    
-  </div></td>
-          <td><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  </div>
+         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" name="Capitale" value="<?php echo $result_pays['Capitale'];?>">
 			</div>
-			</td>
-			<td><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" name="Langue" value="<?php echo $result_pays['Langue'];?>">
 			</div>
-			</td>
-			<td><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" name="Population" value="<?php echo $result_pays['Population'];?>">
 			</div>
-			</td>
-			<td><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" STYLE="width:150px;">
-    <input class="mdl-textfield__input" type="date" name="DateEntreeUE" value="<?php echo $result_pays['DateEntreeUE'];?>">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" STYLE="width:150px;">
+    <input class="mdl-textfield__input" type="text" name="Année d'entrée dans l'UE" value="<?php echo $result_pays['DateEntreeUE'];?>">
 			</div>
-			</td>
-			<td><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" STYLE="width:90px;">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" STYLE="width:90px;">
     <input class="mdl-textfield__input" type="text" name="PIB" value="<?php echo $result_pays['PIB'];?>">
 			</div>
 			</td>
-			<td><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" STYLE="width:50px;">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" STYLE="width:50px;">
     <input class="mdl-textfield__input" type="text" name="IDH" value="<?php echo $result_pays['IDH'];?>">
 			</div>
-			</td>
-  <td><input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-4 color-t" value="Modifier" name="update_pays"
-	  >
+			
+ <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-4 color-t" value="Modifier" name="update_pays">
   
-</input></td>
-	</tr>
+</input>
+ <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-4 color-t" value="Supprimmer" name="delete_pays">
+  
+</input>
+	
 	</form>
 	<?php } ?>
-	</tbody>
-	</table>
+	
  
 	  
 	  
@@ -219,24 +282,7 @@ name="insert_pays" 	  >
   <!-- FAB button with ripple -->
   
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 
 

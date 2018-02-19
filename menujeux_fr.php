@@ -1,4 +1,6 @@
-
+<?php session_start();
+$_SESSION['title']="Jeux";
+?>
 
 <?php include('header.php');?>
 

@@ -1,5 +1,5 @@
-<?php session_start();
-
+<?php session_start();?>
+<?php include('connexionBD.php');
 //permet de recuper  d'utiliser $_SESSION
 
 
@@ -15,7 +15,6 @@ for ($x = 1; $x <= 5; $x++) {
  
 }
 
-
 }
 
 if(isset($_POST['langue'])){
@@ -24,7 +23,8 @@ if(isset($_POST['langue'])){
 ?>
 
 <?php 
-
+//enregistrement des top_score
+include('record_topscore.php');
 
 
 
@@ -36,7 +36,7 @@ if(isset($_POST['langue'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Menu</title>
+	<title>connard</title>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
@@ -53,7 +53,7 @@ if(isset($_POST['langue'])){
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">Title</span>
+      <span class="mdl-layout-title"><?php echo $_SESSION['title'];?></span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
@@ -61,7 +61,7 @@ if(isset($_POST['langue'])){
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
+    <span class="mdl-layout-title">Menu</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="menujeux_fr.php">Jouer</a>
       <a class="mdl-navigation__link" href="index.php">Langue</a>

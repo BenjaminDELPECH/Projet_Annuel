@@ -1,3 +1,8 @@
+<?php session_start();
+$_SESSION['title']="Pseudo";
+?>
+
+
 <?php include('header.php');?>
 	<button class=" 
 	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonretour" onclick="window.location='menujeux_fr.php'"

@@ -1,3 +1,7 @@
+<?php session_start();
+$_SESSION['title']="Quizz";
+?>
+
 
 	<?php include('header.php');?>
 	<?php include('restrictions.php');?>

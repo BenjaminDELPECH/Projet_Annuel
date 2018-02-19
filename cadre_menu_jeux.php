@@ -1,13 +1,14 @@
 
 
-<div class="center div-style-1 background-2">	
 
-			<div style="">
+
+			<div class="center" style="margin-top:30px;">
+			<DIV style="font-size:34px;text-align:center;">Bienvenue <?php echo $_SESSION['pseudo'];?> !</div>
 
 
 	<button class="
 	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-2 color-t" onclick="window.location='Carte_interactive_fr.php'"
-			style="margin-top:10px;">Carte interactive</button>
+			style="margin-top:60px;">Carte interactive</button>
 			<button class="
 	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-2 color-t" onclick="window.location='pendu_fr.php'"
 			style="">Jeu du Pendu</button>

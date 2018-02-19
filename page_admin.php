@@ -1,3 +1,8 @@
+<?php session_start();
+$_SESSION['title']="Admin";
+?>
+
+
 <?php include('header.php');?>
 <?php include('insertion.php');?>
 

@@ -8,7 +8,7 @@ body{margin: 0;
  .center{margin: 0 auto;}
  
  .button-1{height:50px;padding:0px 40px 0px 40px;color:white;}
- .button-1{height:50px;padding:0px 40px 0px 40px;color:white;}
+ .button-2{height:70px;padding:0px 90px 0px 40px;color:white;}
  
  
  .div-style-1{padding:50px;box-shadow:2px 4px 14px #888888;border-radius:3px;}
@@ -27,10 +27,7 @@ body{margin: 0;
 	line-height: 20px;}
 
 
-.button-2{border:1px solid white;text-transform: lowercase;font-size:24px;COLOR:white;
 
-
-	display:block;width:350px;margin-top:16px;padding:0px 30px 0px 30px;height:70px;}
 
 
 
@@ -56,6 +53,13 @@ body{margin: 0;
 COLOR:white;
 	background-color:#0058CC;WIDTH:130px;height:60px;
 }
+
+.buttonretour2{
+	
+COLOR:white;
+	background-color:#0058CC;WIDTH:100px;height:43px;
+}
+
 
 .buttonlangue:hover{
 	border:2px solid blue;
