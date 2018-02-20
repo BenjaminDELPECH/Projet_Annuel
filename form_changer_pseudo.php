@@ -17,12 +17,12 @@
     <form action="menujeux_fr" method="POST">
       
       <div id="name">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label " style="width:300px;margin-left:40px;">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label " style="width:300px;margin-left:40px;font-size:24px;">
     <input class="mdl-textfield__input" type="text" name="pseudo">
     <label class="mdl-textfield__label" for="sample3">Pseudo</label>
   </div>
           
-      <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-3 color-t" value="connexion"
+      <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-3 color-t" value="Jouer"
 name="login_request" 	  >
   
 </input>

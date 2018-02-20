@@ -221,8 +221,28 @@ name="insert_pays" 	  >
   <br><br>
     
 
-      
-		
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	<b>Pays</b>
+   </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	<b>Capitale</b>
+   </div>
+   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	<b>Langue</b>
+   </div>
+   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	<b>Population</b>
+   </div>
+   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:150px;">
+	<b>Année d'entrée dans l'UE</b>
+   </div>
+   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+	<b>PIB</b>
+   </div>
+   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	<b>IDH</b>
+   </div>
+        
 		<form method="POST" action="">
 		<?php foreach($bdd->query("SELECT * FROM pays")as $result_pays){	?>
 	<input type="hidden" name="IDPays" value="<?php echo $result_pays['IDPays'];?>"></input>
@@ -242,7 +262,7 @@ name="insert_pays" 	  >
     <input class="mdl-textfield__input" type="text" name="Population" value="<?php echo $result_pays['Population'];?>">
 			</div>
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" STYLE="width:150px;">
-    <input class="mdl-textfield__input" type="text" name="Année d'entrée dans l'UE" value="<?php echo $result_pays['DateEntreeUE'];?>">
+			<input class="mdl-textfield__input" type="text" name="DateEntreeUE" value="<?php echo $result_pays['DateEntreeUE'];?>">
 			</div>
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" STYLE="width:90px;">
     <input class="mdl-textfield__input" type="text" name="PIB" value="<?php echo $result_pays['PIB'];?>">

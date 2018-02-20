@@ -1,13 +1,13 @@
 <?php if(isset($_POST['update_pays'])){
 	
-	
+	echo $_POST['DateEntreeUE`'];
 	
 	$bdd->query(
 	"UPDATE `pays` SET `NomPays` =  '".$_POST['NomPays']."' ,
 	`Capitale` =  '".$_POST['Capitale']."' ,
 	`Langue` =  '".$_POST['Langue']."' ,
 	`Population` =  '".$_POST['Population']."' ,
-	
+	`DateEntreeUE` =  '".$_POST['DateEntreeUE']."' ,
 	`PIB` =  '".$_POST['PIB']."' ,
 	`IDH` =  '".$_POST['IDH']."' 
 	
@@ -20,7 +20,7 @@
 	<?php if(isset($_POST['insert_pays'])){
 		
 		$bdd->query(
-	"INSERT INTO `pays` (`NomPays`, `Capitale`, `Langue`, `Population`, `PIB`, `IDH`) VALUES ('".$_POST['NomPays']."', '".$_POST['Capitale']."', '".$_POST['Langue']."', '".$_POST['Population']."', '".$_POST['PIB']."', '".$_POST['IDH']."')");
+	"INSERT INTO `pays` (`NomPays`, `Capitale`, `Langue`, `Population`,`DateEntreeUE`, `PIB`, `IDH`) VALUES ('".$_POST['NomPays']."', '".$_POST['Capitale']."', '".$_POST['Langue']."', '".$_POST['Population']."','".$_POST['DateEntreeUE`']."', '".$_POST['PIB']."', '".$_POST['IDH']."')");
 	
 	
 	
