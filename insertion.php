@@ -1,6 +1,6 @@
 <?php if(isset($_POST['update_pays'])){
 	
-	echo $_POST['DateEntreeUE`'];
+	
 	
 	$bdd->query(
 	"UPDATE `pays` SET `NomPays` =  '".$_POST['NomPays']."' ,

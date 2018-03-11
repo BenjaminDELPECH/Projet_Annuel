@@ -242,9 +242,9 @@ name="insert_pays" 	  >
    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 	<b>IDH</b>
    </div>
-        
+        <?php foreach($bdd->query("SELECT * FROM pays")as $result_pays){	?>
 		<form method="POST" action="">
-		<?php foreach($bdd->query("SELECT * FROM pays")as $result_pays){	?>
+		
 	<input type="hidden" name="IDPays" value="<?php echo $result_pays['IDPays'];?>"></input>
 	
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

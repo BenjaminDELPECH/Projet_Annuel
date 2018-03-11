@@ -45,7 +45,8 @@ $longueur_mot = strlen($_SESSION['Pays_choose']);
 </DIV>
 <div  class="mdl-cell"style="margin-top:10px;font-size:34px;">
 Score: 
-<?php echo $_SESSION['score_pendu'];?>
+<?php 
+echo $_SESSION['score_pendu'];?>
 </div>
 
 </div>
@@ -127,13 +128,13 @@ header('location:pendu_fr.php');
 
 	}elseif($_SESSION['nb_t_rest']==1){
 		
-		
 	
-	$_SESSION['perdu']=TRUE;
+	$_SESSION['jeux']="pendu";
+	$_SESSION['perdu_pendu']=TRUE;
 	
 	unset($_SESSION['nb_t_rest']);
 	header('location:pendu_fr.php');
-	
+
 }
 
 
