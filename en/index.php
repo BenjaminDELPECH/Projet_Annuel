@@ -1,5 +1,5 @@
 <?php session_start();
-$_SESSION['title']="Language";
+$_SESSION['title']="Carte Interactive";
 ?>
 
 

@@ -1,6 +1,13 @@
 <?php session_start();?>
-<?php 
+<?php include('connexionBD.php');
 //permet de recuper  d'utiliser $_SESSION
+
+
+if(isset($_POST['pseudo'])){
+	//Création d'une variable qui reste malgrès les changement de page
+	//Elle est perdue quand on ferme le naviguateur.
+$_SESSION['pseudo']=$_POST['pseudo'];
+//creation d'un tableau coeff ou sont stockées tout les proba d'avoir tel ou telle quesiton
 
 for ($x = 1; $x <= 5; $x++) {
   
@@ -8,7 +15,7 @@ for ($x = 1; $x <= 5; $x++) {
  
 }
 
-
+}
 
 if(isset($_POST['langue'])){
 	if($_POST['langue']==fr){header('location:fr/menujeux.php');}
@@ -18,7 +25,16 @@ if(isset($_POST['langue'])){
 }
 ?>
 
+<?php 
+//enregistrement des top_score
+include('record_topscore.php');
 
+
+
+?>
+	
+
+<?php include('connexionBD.php');?>
 
 <!DOCTYPE html>
 <html>
@@ -48,7 +64,17 @@ if(isset($_POST['langue'])){
       
     </div>
   </header>
-  
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="menujeux.php">Jouer</a>
+      <a class="mdl-navigation__link" href="../index.php">Langue</a>
+      <a class="mdl-navigation__link" href="page_pseudo.php">Pseudo</a>
+	   <a class="mdl-navigation__link" href="page_login_admin.php">Admin</a>
+	  
+ 
+    </nav>
+  </div>
   <main class="mdl-layout__content">
   
     <div class="mdl-grid">

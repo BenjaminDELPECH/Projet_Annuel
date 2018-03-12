@@ -1,8 +1,3 @@
-<?php session_start();
-$_SESSION['title']="Language";
-?>
-
-
 <?php include('header.php');?>
 	<button class=" 
 	mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonretour color-t" onclick="window.location='menujeux_fr.php'"
