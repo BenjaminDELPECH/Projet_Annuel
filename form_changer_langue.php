@@ -1,3 +1,15 @@
+<?php if (isset($_POST['langue'])){
+	$_SESSION['langue']=TRUE;
+	if($_POST['langue']==fr){
+		header('location:fr/menujeux.php');
+	}
+	if($_POST['langue']==en){
+		header('location:en/menujeux.php');
+	}
+}?>
+
+
+
 <div class="center" style="margin-top:40px;">	
 			<div  class="text1" style="font-size:29px;"><div>Veillez choisir la langue</div>
 			<div style="margin-top:15px;">Please choose a language</div></div>
@@ -15,7 +27,7 @@
 			</div>
 			
 			
-			<div class="mdl-cell">
+			<div class="mdl-cell" >
 			<form method="post" action="">
 			<input type="hidden" name="langue" value="en">
 			<button type="submit" 
