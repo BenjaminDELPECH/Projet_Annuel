@@ -124,7 +124,7 @@ if($taille_tab == ($longueur_mot -2)){
 	
 	$_SESSION['score_pendu']=($_SESSION['score_pendu'])+($_SESSION['nb_t_rest']);
 unset($_SESSION['nb_t_rest']);
-header('location:pendu_fr.php');
+header('location:pendu.php');
 
 	}elseif($_SESSION['nb_t_rest']==1){
 		
@@ -133,7 +133,7 @@ header('location:pendu_fr.php');
 	$_SESSION['perdu_pendu']=TRUE;
 	
 	unset($_SESSION['nb_t_rest']);
-	header('location:pendu_fr.php');
+	header('location:pendu.php');
 
 }
 
