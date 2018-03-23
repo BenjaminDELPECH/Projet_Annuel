@@ -3,5 +3,5 @@
 } ?>
 
 <?php if(!isset($_SESSION['pseudo'])){
-	header('location:page_pseudo_fr.php');
+	header('location:page_pseudo.php');
 } ?>

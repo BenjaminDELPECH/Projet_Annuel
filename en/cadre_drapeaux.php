@@ -27,7 +27,7 @@ $payschoose=strtolower($_SESSION['pays']);
 	if($postpays==$payschoose){
 		$_SESSION['score_drapeau']++;
 		unset($_SESSION['pays']);
-		header('location:drapeaux_fr.php');
+		header('location:drapeaux.php');
 	}else{
 		$_SESSION['essai_restant']=$_SESSION['essai_restant']-1;
 		
@@ -39,7 +39,7 @@ $payschoose=strtolower($_SESSION['pays']);
 	$_SESSION['essai_restant']=2;
 	unset($_SESSION['pays']);
 	unset($_SESSION['essai_restant']);
-		header('location:drapeaux_fr.php');
+		header('location:drapeaux.php');
 		}
 	}
 }

@@ -28,7 +28,7 @@ $repchoose=strtolower($_SESSION['repchoose']);
 	if($postrep==$repchoose){
 		$_SESSION['score_quizz']++;
 		unset($_SESSION['repchoose']);
-		header('location:quizz_fr.php');
+		header('location:quizz.php');
 	}else{
 		$_SESSION['essai_restant']=$_SESSION['essai_restant']-1;
 		
@@ -40,7 +40,7 @@ $repchoose=strtolower($_SESSION['repchoose']);
 	$_SESSION['essai_restant']=2;
 	unset($_SESSION['repchoose']);
 	unset($_SESSION['essai_restant']);
-		header('location:quizz_fr.php');
+		header('location:quizz.php');
 		}
 	}
 }

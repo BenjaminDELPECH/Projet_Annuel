@@ -18,7 +18,7 @@
 			<div  class="text1" style="font-size:29px;"><div>Veillez choisir la langue</div>
 			<div style="margin-top:15px;">Please choose a language</div></div>
 			
-			<?php echo $_POST['language'];?>
+		
 			<div class="mdl-grid" style="margin-top:30px;">
 			<div class="mdl-cell ">
 			<form method="post" action="">

@@ -44,11 +44,11 @@ include('record_topscore.php');
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
-<link rel="stylesheet" href="./css/material.min.css">
-<script defer src="./js/material.min.js"></script>
-<script type="text/javascript" src="./js/mapper.js"></script>
-<script type="text/javascript" src="./js/functions.js"></script>
-	<link rel="stylesheet" href="./css/projet_annuel.css">
+<link rel="stylesheet" href="css/material.min.css">
+<script defer src="js/material.min.js"></script>
+<script type="text/javascript" src="js/mapper.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+	<link rel="stylesheet" href="css/projet_annuel.css">
 </head>
 
 <body >

@@ -1,20 +1,34 @@
-<?php if(($_SESSION['perdu_drapeau']==TRUE) or (($_SESSION['perdu_pendu'])==TRUE)
-	or(($_SESSION['perdu_quizz'])==TRUE)){
+<?php 
+$top_score=False;
 
+
+
+
+if(isset($_SESSION['perdu_drapeau'])){
 if ($_SESSION['perdu_drapeau'] == TRUE) {
 $score=$_SESSION['score_drapeau'];
-$_SESSION['perdu_drapeau']=FALSE;
+$top_score=TRUE;
+}
 }
 
+if(isset($_SESSION['perdu_pendu'])){
 if ($_SESSION['perdu_pendu'] == TRUE) {
 $score=$_SESSION['score_pendu'];
-$_SESSION['perdu_pendu']=False;}
+$top_score=TRUE;
+}
+}
 
+if(isset($_SESSION['perdu_quizz'])){
 if ($_SESSION['perdu_quizz'] == TRUE) {
 $score=$_SESSION['score_quizz'];
-$_SESSION['perdu_quizz']=False;}
+$top_score=TRUE;
+}
+}
+
+
+
 	
-	
+	if($top_score== TRUE){
 	$jeux=$_SESSION['jeux'];
 	$pseudo=$_SESSION['pseudo'];
 	$cpt_score=0;
@@ -51,10 +65,13 @@ limit 1");
 
 	
 
-
+$_SESSION['score_drapeau']=0;
 $_SESSION['score_pendu']=0;
 $_SESSION['score_quizz']=0;
-
+$_SESSION['perdu_drapeau']=FALSE;
+$_SESSION['perdu_pendu']=False;
+$_SESSION['perdu_quizz']=False;
+$top_score=FALSE;
 }
 
 

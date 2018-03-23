@@ -14,7 +14,7 @@
   
   <div class="mdl-card__supporting-text">
    
-    <form action="menujeux_fr" method="POST">
+    <form action="menujeux.php" method="POST">
       
       <div id="name">
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label " style="width:300px;margin-left:40px;font-size:24px;">
