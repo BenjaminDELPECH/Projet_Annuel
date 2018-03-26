@@ -74,7 +74,9 @@ $_SESSION['pays']=strtolower($result_pays['NomPays']);
 </DIV>
 <div  class="mdl-cell"style="margin-top:10px;font-size:34px;">
 Score: 
-<?php echo $_SESSION['score_drapeau'];?>
+<?php if(isset($_SESSION['score_drapeau'])){
+echo $_SESSION['score_drapeau'];
+}?>
 </div>
 <div  class="mdl-cell"style="margin-top:10px;font-size:17px;">
 Nombre d'essais restant: 

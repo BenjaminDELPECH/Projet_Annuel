@@ -1,6 +1,3 @@
-<?php session_start();
-$_SESSION['title']="Language";
-?>
 
 
 <?php include('header.php');?>

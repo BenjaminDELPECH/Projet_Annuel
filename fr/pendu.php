@@ -1,6 +1,4 @@
-<?php session_start();
-$_SESSION['title']="Pendu";
-?>
+
 	<?php include('header.php');?>
 	<?php include('restrictions.php');?>
 	

@@ -1,6 +1,5 @@
-<?php session_start();
-$_SESSION['title']="Top scores";
-?>
+
+
 
 
 <?php include('header.php');?>

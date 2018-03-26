@@ -1,6 +1,3 @@
-<?php session_start();
-$_SESSION['title']="Carte Interactive";
-?>
 
 	<?php include('header.php');?>
 	<?php include('restrictions.php');?>

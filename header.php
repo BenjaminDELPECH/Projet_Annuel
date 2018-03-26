@@ -1,5 +1,8 @@
-<?php session_start();?>
-<?php 
+
+
+
+
+<?php include('connexionBD.php');
 //permet de recuper  d'utiliser $_SESSION
 
 for ($x = 1; $x <= 5; $x++) {
@@ -8,15 +11,22 @@ for ($x = 1; $x <= 5; $x++) {
  
 }
 
-
-
-if(isset($_POST['langue'])){
-	if($_POST['langue']==fr){header('location:fr/menujeux.php');}
-	elseif($_POST['langue']==en){header('location:en/menujeux.php');}
-
-	
+if(isset($_POST['pseudo'])){session_start();
+	//Création d'une variable qui reste malgrès les changement de page
+	//Elle est perdue quand on ferme le naviguateur.
+$_SESSION['pseudo']=$_POST['pseudo'];
+echo $_SESSION['pseudo'];
+//creation d'un tableau coeff ou sont stockées tout les proba d'avoir tel ou telle quesiton
 }
+
+
+ if (isset($_POST['langue'])){
+	$_SESSION['langue']=TRUE;
+}
+
 ?>
+
+
 
 
 
@@ -41,7 +51,7 @@ if(isset($_POST['langue'])){
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title"><?php echo $_SESSION['title'];?></span>
+      <span class="mdl-layout-title">Langue</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->

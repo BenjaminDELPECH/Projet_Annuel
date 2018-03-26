@@ -1,9 +1,15 @@
 <?php session_start();?>
-<?php include('connexionBD.php');
-//permet de recuper  d'utiliser $_SESSION
+
+<?php include('connexionBD.php');?>
+
+<?php if (isset($_POST['langue'])){
+	$_SESSION['langue']=TRUE;
+}
+?>
 
 
-if(isset($_POST['pseudo'])){
+
+<?php if(isset($_POST['pseudo'])){
 	//Création d'une variable qui reste malgrès les changement de page
 	//Elle est perdue quand on ferme le naviguateur.
 $_SESSION['pseudo']=$_POST['pseudo'];
@@ -17,13 +23,15 @@ for ($x = 1; $x <= 5; $x++) {
 
 }
 
-if(isset($_POST['langue'])){
-	if($_POST['langue']==fr){header('location:fr/menujeux.php');}
-	elseif($_POST['langue']==en){header('location:en/menujeux.php');}
 
-	
+
+
+
+ if (isset($_POST['langue'])){
+	$_SESSION['langue']=TRUE;
 }
 ?>
+
 
 <?php 
 //enregistrement des top_score
@@ -57,7 +65,7 @@ include('record_topscore.php');
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title"><?php echo $_SESSION['title'];?></span>
+      <span class="mdl-layout-title"></span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->

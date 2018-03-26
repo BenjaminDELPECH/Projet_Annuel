@@ -1,6 +1,6 @@
 <?php 
 
-if(($_SESSION['top_score']==TRUE)or($_SESSION['affiche_perdu']==TRUE)){
+if(((isset($_SESSION['top_score'])) and ($_SESSION['top_score']==TRUE))or((isset($_SESSION['top_score']))and ($_SESSION['affiche_perdu']==TRUE))){
 	If($_SESSION['top_score']==TRUE){$message="Bien joué, tu viens de faire un top score!";$color="green";}
 	elseif($_SESSION['affiche_perdu']==TRUE){$message="Bien essayé! Retentes ta chance!";
 	$color="red";};
@@ -62,5 +62,5 @@ $_SESSION['affiche_perdu']=FALSE;
 	</div>
 	
 	<?php
-}
+} 
 ?>

@@ -16,10 +16,10 @@ input[type=text]{
 
 <?php 
 
-
-
+$letter="";
+if(isset($_POST['letter'])){
 $letter=$_POST['letter'];
-
+}
 
 if(!isset($_SESSION['Pays_choose'])or empty($_SESSION['Pays_choose'])){
 foreach($bdd->query("SELECT count(*)as nb FROM PAYS")as $result_nb){}
@@ -33,6 +33,10 @@ $_SESSION['Pays_choose']= $result['NomPays'];
 }
 
 $longueur_mot = strlen($_SESSION['Pays_choose']);
+
+if(!isset($_SESSION['score_pendu'])){
+	$_SESSION['score_pendu']=0;
+}
 ?>
 <div class="mdl-grid mdl-cell--10-col" id="cadre_pendu1" style="box-shadow:2px 2px 7px black;padding:30px;" >
 <div CLASS="mdl-cell mdl-cell--8-col ">
@@ -52,9 +56,7 @@ echo $_SESSION['score_pendu'];?>
 </div>
 <?php 
 
-if(!isset($_SESSION['score_pendu'])){
-	$_SESSION['score_pendu']=0;
-}
+
 
 if(!isset($_SESSION['tableau_indices'])){
 $_SESSION['tableau_indices']=array();
@@ -77,6 +79,7 @@ foreach($tab_letter as $elmt){
 }
 
 if($deja_joue==FALSE){
+
 array_push($tab_letter,$letter);
 $_SESSION['tab_letter']=$tab_letter;
 }

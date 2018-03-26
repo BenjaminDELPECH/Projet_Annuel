@@ -1,12 +1,4 @@
-<?php if (isset($_POST['langue'])){
-	$_SESSION['langue']=TRUE;
-	if($_POST['langue']==fr){
-		header('location:fr/menujeux.php');
-	}
-	if($_POST['langue']==en){
-		header('location:en/menujeux.php');
-	}
-}?>
+
 
 
 
@@ -17,7 +9,7 @@
 		
 			<div class="mdl-grid" style="margin-top:30px;">
 			<div class="mdl-cell ">
-			<form method="post" action="">
+			<form method="post" action="fr/menujeux.php">
 			<input type="hidden" name="langue" value="fr">
 			<button type="submit" 
 			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonretour color-t" style="margin-left:4px;">
@@ -28,7 +20,7 @@
 			
 			
 			<div class="mdl-cell" >
-			<form method="post" action="">
+			<form method="post" action="en/menujeux.php">
 			<input type="hidden" name="langue" value="en">
 			<button type="submit" 
 			class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonretour color-t" style="margin-left:4px;">
