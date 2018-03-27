@@ -1,30 +1,7 @@
 
 
+<?php include('connexionBD.php');?>
 
-
-<?php include('connexionBD.php');
-//permet de recuper  d'utiliser $_SESSION
-
-for ($x = 1; $x <= 5; $x++) {
-  
-  $_SESSION['coeff'][$x] = 1;
- 
-}
-
-if(isset($_POST['pseudo'])){session_start();
-	//Création d'une variable qui reste malgrès les changement de page
-	//Elle est perdue quand on ferme le naviguateur.
-$_SESSION['pseudo']=$_POST['pseudo'];
-echo $_SESSION['pseudo'];
-//creation d'un tableau coeff ou sont stockées tout les proba d'avoir tel ou telle quesiton
-}
-
-
- if (isset($_POST['langue'])){
-	$_SESSION['langue']=TRUE;
-}
-
-?>
 
 
 
@@ -51,14 +28,24 @@ echo $_SESSION['pseudo'];
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">Langue</span>
+      <span class="mdl-layout-title"></span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       
     </div>
   </header>
-  
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="menujeux.php">Jouer</a>
+      <a class="mdl-navigation__link" href="../index.php">Langue</a>
+      <a class="mdl-navigation__link" href="page_pseudo.php">Pseudo</a>
+	   <a class="mdl-navigation__link" href="page_login_admin.php">Admin</a>
+	  
+ 
+    </nav>
+  </div>
   <main class="mdl-layout__content">
   
     <div class="mdl-grid">

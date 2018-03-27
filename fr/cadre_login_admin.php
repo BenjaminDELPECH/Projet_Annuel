@@ -39,7 +39,7 @@ if(isset($result)){
     <label class="mdl-textfield__label" for="sample3">Nom de compte</label>
   </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" name="password">
+    <input class="mdl-textfield__input" type="password" name="password">
     <label class="mdl-textfield__label" for="sample3">Mot de passe</label>
   </div>
       <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-3 color-t" value="connexion"

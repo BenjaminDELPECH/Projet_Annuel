@@ -19,7 +19,7 @@
 	
 	 ?> <div><img class="imagePays" src="Img/<?php echo $result['IDPays'];?>.png" /></div>
 	 <div CLASS="info_pays" style="margin-top:14px;">Pays : <?php echo $result['NomPays'];?></div>
-	 <div CLASS="info_pays">Capitale : <?php echo $result['Capital'];?></div>
+	 <div CLASS="info_pays">Capitale : <?php echo $result['Capitale'];?></div>
 	 <div CLASS="info_pays">Langue : <?php echo $result['Langue'];?></div>
 	 <div CLASS="info_pays">Population : <?php echo $result['Population'];?></div>
 	<div CLASS="info_pays"> Date d'entrée dans l'UE : <?php echo $result['DateEntreeUE'];?></div>

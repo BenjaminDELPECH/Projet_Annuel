@@ -51,7 +51,7 @@ foreach($bdd->query("SELECT count(*)as nb FROM questions")as $result_nb){}
 
 
 $rand_numb=rand(1,$result_nb['nb']);
-echo $rand_numb;
+
 
 foreach($bdd->query("SELECT * FROM questions 
 LIMIT $rand_numb")as $result_pays){
@@ -59,7 +59,7 @@ LIMIT $rand_numb")as $result_pays){
 $_SESSION['question']=strtolower($result_pays['textquestion']);
 $_SESSION['repchoose']=strtolower($result_pays['reponse']);
 }
-echo $_SESSION['repchoose'];
+
 
 
 }
@@ -79,7 +79,9 @@ echo $_SESSION['repchoose'];
 </DIV>
 <div  class="mdl-cell"style="margin-top:10px;font-size:34px;">
 Score: 
-<?php echo $_SESSION['score_quizz'];?>
+<?php IF(isset($_SESSION['score_quizz'])){
+echo $_SESSION['score_quizz'];
+} ?>
 </div>
 <div  class="mdl-cell"style="margin-top:10px;font-size:17px;">
 Nombre d'essais restant: 
