@@ -1,8 +1,8 @@
 <?php 
 
 if(($_SESSION['top_score']==TRUE)or($_SESSION['affiche_perdu']==TRUE)){
-	If($_SESSION['top_score']==TRUE){$message="Bien joué, tu viens de faire un top score!";$color="green";}
-	elseif($_SESSION['affiche_perdu']==TRUE){$message="Bien essayé! Retentes ta chance!";
+	If($_SESSION['top_score']==TRUE){$message="Well played, you just made a high score!";$color="green";}
+	elseif($_SESSION['affiche_perdu']==TRUE){$message="Well played! Try again!";
 	$color="red";};
 
 $_SESSION['top_score']=FALSE;
@@ -36,7 +36,7 @@ $_SESSION['affiche_perdu']=FALSE;
 	
 	
 	<div class="mdl-grid mdl-cell--12-col " style="margin-top:25px;">
-	<div class="mdl-cell mdl-cell--4-col">Pseudo</div>
+	<div class="mdl-cell mdl-cell--4-col">Player</div>
 	<div class="mdl-cell mdl-cell--2-col">Score</div>
 	<div class="mdl-cell mdl-cell--6-col">Date</div>
 	</div>

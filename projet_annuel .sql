@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 19 Mars 2018 à 13:03
+-- Généré le :  Mar 27 Mars 2018 à 11:55
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `projet_annuel`
 --
+CREATE DATABASE IF NOT EXISTS `projet_annuel` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `projet_annuel`;
 
 -- --------------------------------------------------------
 
@@ -44,6 +46,31 @@ CREATE TABLE `pays` (
 INSERT INTO `pays` (`IDPays`, `NomPays`, `Capitale`, `Langue`, `Population`, `DateEntreeUE`, `PIB`, `IDH`) VALUES
 (1, 'France', 'Paris', 'Français', '63M', '1957', '37K', '0.9'),
 (2, 'Espagne', 'Madrid', 'Espagnol', '46M', '', '33K', '0.9');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `pays_en`
+--
+
+CREATE TABLE `pays_en` (
+  `IDPays` int(2) NOT NULL,
+  `NomPays` varchar(50) NOT NULL,
+  `Capitale` varchar(50) NOT NULL,
+  `Langue` varchar(50) NOT NULL,
+  `Population` varchar(50) NOT NULL,
+  `DateEntreeUE` varchar(4) DEFAULT NULL,
+  `PIB` varchar(50) NOT NULL,
+  `IDH` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `pays_en`
+--
+
+INSERT INTO `pays_en` (`IDPays`, `NomPays`, `Capitale`, `Langue`, `Population`, `DateEntreeUE`, `PIB`, `IDH`) VALUES
+(1, 'France', 'Paris', 'French', '63M', '1957', '37K', '0.9'),
+(2, 'Spain', 'Madrid', 'Spanish', '46M', '', '33K', '0.9');
 
 -- --------------------------------------------------------
 
@@ -81,8 +108,28 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`IDQuestion`, `textquestion`, `reponse`) VALUES
-(10, 'Quelle est la capitale de la France?', 'Paris'),
+(10, 'Quelle est la capitale de la France', 'Paris'),
 (11, 'Madrid est la capitale de ?', 'Espagne');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `questions_en`
+--
+
+CREATE TABLE `questions_en` (
+  `IDQuestion` int(11) NOT NULL,
+  `textquestion` varchar(200) NOT NULL,
+  `reponse` varchar(200) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `questions_en`
+--
+
+INSERT INTO `questions_en` (`IDQuestion`, `textquestion`, `reponse`) VALUES
+(10, 'What is the captital of France?', 'Paris'),
+(11, 'Madrid is the capital of what countrie?', 'Spain');
 
 -- --------------------------------------------------------
 
@@ -103,6 +150,10 @@ CREATE TABLE `topscore` (
 --
 
 INSERT INTO `topscore` (`IdScore`, `NomJeux`, `Pseudo`, `Score`, `Date`) VALUES
+(192, 'quizz', 'test', 2, '2018-03-27 11:53:37'),
+(191, 'pendu', 'test', 7, '2018-03-27 10:57:57'),
+(190, 'Drapeaux', 'test', 1, '2018-03-26 21:19:41'),
+(189, 'pendu', 'test', 11, '2018-03-23 15:52:59'),
 (188, 'pendu', 'test', 39, '2018-03-17 22:54:41');
 
 --
@@ -116,6 +167,12 @@ ALTER TABLE `pays`
   ADD PRIMARY KEY (`IDPays`);
 
 --
+-- Index pour la table `pays_en`
+--
+ALTER TABLE `pays_en`
+  ADD PRIMARY KEY (`IDPays`);
+
+--
 -- Index pour la table `professeur`
 --
 ALTER TABLE `professeur`
@@ -125,6 +182,12 @@ ALTER TABLE `professeur`
 -- Index pour la table `questions`
 --
 ALTER TABLE `questions`
+  ADD PRIMARY KEY (`IDQuestion`);
+
+--
+-- Index pour la table `questions_en`
+--
+ALTER TABLE `questions_en`
   ADD PRIMARY KEY (`IDQuestion`);
 
 --
@@ -151,12 +214,12 @@ ALTER TABLE `professeur`
 -- AUTO_INCREMENT pour la table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `IDQuestion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `IDQuestion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT pour la table `topscore`
 --
 ALTER TABLE `topscore`
-  MODIFY `IdScore` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
+  MODIFY `IdScore` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

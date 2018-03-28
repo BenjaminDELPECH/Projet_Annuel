@@ -15,9 +15,9 @@
 <div class="cadre_droit mdl-cell center" style="min-width:400px;" id="cadre_droit">
 <?php 
 	$nomPays=$_GET['Pays'];
-	foreach($bdd->query("Select * From Pays Where NomPays like '$nomPays'")as $result){};
+	foreach($bdd->query("Select * From pays Where NomPays like '$nomPays'")as $result){};
 	
-	 ?> <div><img class="imagePays" src="Img/<?php echo $result['IDPays'];?>.png" /></div>
+	 ?> <div><img class="imagePays" src="Img/<?php echo $result['NomPays'];?>.png" /></div>
 	 <div CLASS="info_pays" style="margin-top:14px;">Pays : <?php echo $result['NomPays'];?></div>
 	 <div CLASS="info_pays">Capitale : <?php echo $result['Capitale'];?></div>
 	 <div CLASS="info_pays">Langue : <?php echo $result['Langue'];?></div>

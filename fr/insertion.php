@@ -2,26 +2,45 @@
 	
 	
 	
-	$bdd->query(
-	"UPDATE `pays` SET `NomPays` =  '".$_POST['NomPays']."' ,
-	`Capitale` =  '".$_POST['Capitale']."' ,
-	`Langue` =  '".$_POST['Langue']."' ,
-	`Population` =  '".$_POST['Population']."' ,
-	`DateEntreeUE` =  '".$_POST['DateEntreeUE']."' ,
-	`PIB` =  '".$_POST['PIB']."' ,
-	`IDH` =  '".$_POST['IDH']."' 
-	
-	
+	$requete=$bdd->prepare(
+	"UPDATE pays SET NomPays =  :NomPays ,
+	`Capitale` =  :Capitale ,
+	`Langue` =  :Langue ,
+	`Population` =  :Population ,
+	`DateEntreeUE` =  :DateEntreeUE ,
+	`PIB` =  :PIB,
+	`IDH` =  :IDH 
 	WHERE `pays`.`IDPays` = '".$_POST['IDPays']."';");
+	
+	$requete->bindParam(':NomPays',$_POST['NomPays'],PDO::PARAM_STR);
+	$requete->bindParam(':Capitale',$_POST['Capitale'],PDO::PARAM_STR);
+	$requete->bindParam(':Langue',$_POST['Langue'],PDO::PARAM_STR);
+	$requete->bindParam(':Population',$_POST['NomPays'],PDO::PARAM_STR);
+	
+	
+	$requete->bindParam(':DateEntreeUE',$_POST['DateEntreeUE'],PDO::PARAM_STR);
+	$requete->bindParam(':PIB',$_POST['PIB'],PDO::PARAM_STR);
+	$requete->bindParam(':IDH',$_POST['IDH'],PDO::PARAM_STR);
+	$requete->execute();
+	
 	
 	
 	} ?>
 
 	<?php if(isset($_POST['insert_pays'])){
 		
-		$bdd->query(
-	"INSERT INTO `pays` (`NomPays`, `Capitale`, `Langue`, `Population`,`DateEntreeUE`, `PIB`, `IDH`) VALUES ('".$_POST['NomPays']."', '".$_POST['Capitale']."', '".$_POST['Langue']."', '".$_POST['Population']."','".$_POST['DateEntreeUE`']."', '".$_POST['PIB']."', '".$_POST['IDH']."')");
+		$requete=$bdd->prepare(
+	"INSERT INTO `pays` (`NomPays`, `Capitale`, `Langue`, `Population`,`DateEntreeUE`, `PIB`, `IDH`) VALUES (:NomPays, :Capitale, :Langue, :Population,:DateEntreeUE, :PIB, :IDH)");
+$requete->bindParam(':NomPays',$_POST['NomPays'],PDO::PARAM_STR);
+	$requete->bindParam(':Capitale',$_POST['Capitale'],PDO::PARAM_STR);
+	$requete->bindParam(':Langue',$_POST['Langue'],PDO::PARAM_STR);
+	$requete->bindParam(':Population',$_POST['NomPays'],PDO::PARAM_STR);
+
 	
+	$requete->bindParam(':DateEntreeUE',$_POST['DateEntreeUE'],PDO::PARAM_STR);
+	$requete->bindParam(':PIB',$_POST['PIB'],PDO::PARAM_STR);
+	$requete->bindParam(':IDH',$_POST['IDH'],PDO::PARAM_STR);
+	$requete->execute();
 	
 	
 	

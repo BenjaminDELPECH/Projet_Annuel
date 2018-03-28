@@ -16,17 +16,17 @@ input[type=text]{
 
 <?php 
 if(!isset($_SESSION['essai_restant'])or empty($_SESSION['essai_restant'])){
-	$_SESSION['essai_restant']=2;
+	$_SESSION['essai_restant']=3;
 }
 
 if (isset($_POST['pays'])){
 	
 	$postpays=strtolower($_POST['pays']);
-$payschoose=strtolower($_SESSION['pays']);
+$payschoose=strtolower($_SESSION['pays_fr']);
 	
 	if($postpays==$payschoose){
 		$_SESSION['score_drapeau']++;
-		unset($_SESSION['pays']);
+		unset($_SESSION['pays_fr']);
 		header('location:drapeaux.php');
 	}else{
 		$_SESSION['essai_restant']=$_SESSION['essai_restant']-1;
@@ -34,10 +34,10 @@ $payschoose=strtolower($_SESSION['pays']);
 		if($_SESSION['essai_restant']<1){
 		$_SESSION['perdu_drapeau']=TRUE;
 		$_SESSION['jeux']="Drapeaux";
-		$_SESSION['pays']="";
+		$_SESSION['pays_fr']="";
 		$_SESSION['essai_restant']=
-	$_SESSION['essai_restant']=2;
-	unset($_SESSION['pays']);
+	$_SESSION['essai_restant']=3;
+	unset($_SESSION['pays_fr']);
 	unset($_SESSION['essai_restant']);
 		header('location:drapeaux.php');
 		}
@@ -45,17 +45,18 @@ $payschoose=strtolower($_SESSION['pays']);
 }
 
 //pour connaitre le nombre de pays dans la table et ainsi generer un nb aleatoire dans une range correcte
-if(!isset($_SESSION['pays'])or empty($_SESSION['pays'])){
-foreach($bdd->query("SELECT count(*)as nb FROM PAYS")as $result_nb){}
+if(!isset($_SESSION['pays_fr'])or empty($_SESSION['pays_fr'])){
+foreach($bdd->query("SELECT count(*)as nb FROM pays")as $result_nb){}
 
 
 $rand_numb=rand(1,$result_nb['nb']);
 $_SESSION['rand_numb']=$rand_numb;
-foreach($bdd->query("SELECT NomPays FROM PAYS where IDPays = '$rand_numb'")as $result_pays){}
+
+foreach($bdd->query("SELECT NomPays FROM pays LIMIT $rand_numb;")as $result_pays){}
 
 
 
-$_SESSION['pays']=strtolower($result_pays['NomPays']);
+$_SESSION['pays_fr']=strtolower($result_pays['NomPays']);
 
 }
 
@@ -80,7 +81,7 @@ echo $_SESSION['score_drapeau'];
 </div>
 <div  class="mdl-cell"style="margin-top:10px;font-size:17px;">
 Nombre d'essais restant: 
-<?php echo $_SESSION['essai_restant'];?>
+<?php echo $_SESSION['essai_restant']-1;?>
 </div>
 
 </div>
@@ -94,7 +95,7 @@ Nombre d'essais restant:
  
 <div class="mdl-grid"  id="cadre_drapeau2" style="margin-top:40px;transition-duration: 1s;">
 
-<img STYLE="height:200px;width:400px;"src="img/<?php echo $_SESSION['rand_numb'];?>.png"></img>
+<img STYLE="height:200px;width:400px;"src="img/<?php echo $_SESSION['pays_fr'];?>.png"></img>
 
 </div>
 

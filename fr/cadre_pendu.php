@@ -21,18 +21,18 @@ if(isset($_POST['letter'])){
 $letter=$_POST['letter'];
 }
 
-if(!isset($_SESSION['Pays_choose'])or empty($_SESSION['Pays_choose'])){
-foreach($bdd->query("SELECT count(*)as nb FROM PAYS")as $result_nb){}
+if(!isset($_SESSION['Pays_choose_fr'])or empty($_SESSION['Pays_choose_fr'])){
+foreach($bdd->query("SELECT count(*)as nb FROM pays")as $result_nb){}
 
 
 $rand=rand(1,$result_nb['nb']);
 
-foreach($bdd->query("SELECT NomPays FROM PAYS where IDPays = '$rand';")as $result){}
+foreach($bdd->query("SELECT NomPays FROM pays LIMIT $rand;")as $result){}
 
-$_SESSION['Pays_choose']= $result['NomPays'];
+$_SESSION['Pays_choose_fr']= $result['NomPays'];
 }
 
-$longueur_mot = strlen($_SESSION['Pays_choose']);
+$longueur_mot = strlen($_SESSION['Pays_choose_fr']);
 
 if(!isset($_SESSION['score_pendu'])){
 	$_SESSION['score_pendu']=0;
@@ -87,7 +87,7 @@ $_SESSION['tab_letter']=$tab_letter;
 $bonne_lettre=FALSE;
 for($i = 1; $i < ($longueur_mot-1); $i++){
 	$existe_deja=False;
-	if ($letter==$_SESSION['Pays_choose'][$i]) {
+	if ($letter==$_SESSION['Pays_choose_fr'][$i]) {
 		
 		foreach($tab_ind as $ind){
 			if ($i == $ind){
@@ -117,7 +117,7 @@ if (($taille_tab == ($longueur_mot -2))or ($_SESSION['nb_t_rest']==1)){
 	
 	
 	unset($_SESSION['tableau_indices']);
-	unset($_SESSION['Pays_choose']);
+	unset($_SESSION['Pays_choose_fr']);
 	
 	
 }
@@ -148,17 +148,17 @@ header('location:pendu.php');
 		<div class="mdl-cell mdl-cell--4-col" STYLE="font-size:40px;">
 <?php
 	
-echo $_SESSION['Pays_choose'][0];
+echo $_SESSION['Pays_choose_fr'][0];
 for($i = 1; $i <($longueur_mot-1); $i++){
 	$verif=FALSE;
 	foreach($tab_ind as $indice){
 	if($i == $indice) { 
-	echo $_SESSION['Pays_choose'][$i];
+	echo $_SESSION['Pays_choose_fr'][$i];
 	$verif = TRUE;}
 	}
 	if ($verif ==FALSE){ echo " - ";}
 	} 	
-echo $_SESSION['Pays_choose'][($longueur_mot-1)];
+echo $_SESSION['Pays_choose_fr'][($longueur_mot-1)];
 
 ?></div>
 	

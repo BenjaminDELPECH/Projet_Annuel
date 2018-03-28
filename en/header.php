@@ -47,7 +47,7 @@ include('record_topscore.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Site educatif</title>
+	<title>Educative Website</title>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
@@ -75,9 +75,9 @@ include('record_topscore.php');
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Menu</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="menujeux.php">Jouer</a>
-      <a class="mdl-navigation__link" href="../index.php">Langue</a>
-      <a class="mdl-navigation__link" href="page_pseudo.php">Pseudo</a>
+      <a class="mdl-navigation__link" href="menujeux.php">Play</a>
+      <a class="mdl-navigation__link" href="../index.php">Language</a>
+      <a class="mdl-navigation__link" href="page_pseudo.php">Username</a>
 	   <a class="mdl-navigation__link" href="page_login_admin.php">Admin</a>
 	  
  

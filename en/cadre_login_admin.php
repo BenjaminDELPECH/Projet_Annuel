@@ -15,7 +15,8 @@ if (isset($_POST['login_request'])){
 if(isset($result)){
 	$_SESSION['admin_connected']=1;
 	header('location:page_admin.php');
-}
+}else{ echo "<div style='padding:5px;color:red;background-color:#DDCCAA;text-align:center;'>
+incorrect login or password</div>";}
 		
 }
 ?>
@@ -25,7 +26,7 @@ if(isset($result)){
 
 <div class="demo-card-wide mdl-card mdl-shadow--2dp ">
   <div class="mdl-card__title color-t">
-    <h2 class="mdl-card__title-text ">Veillez rentrez vos identifiants</h2>
+    <h2 class="mdl-card__title-text ">Type in your username and password</h2>
   </div>
   
   
@@ -36,11 +37,11 @@ if(isset($result)){
       <div id="name">
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
     <input class="mdl-textfield__input" type="text" name="login">
-    <label class="mdl-textfield__label" for="sample3">Nom de compte</label>
+    <label class="mdl-textfield__label" for="sample3">Username</label>
   </div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" name="password">
-    <label class="mdl-textfield__label" for="sample3">Mot de passe</label>
+    <input class="mdl-textfield__input" type="password" name="password">
+    <label class="mdl-textfield__label" for="sample3">Password</label>
   </div>
       <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-3 color-t" value="connexion"
 name="login_request" 	  >

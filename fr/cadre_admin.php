@@ -64,7 +64,7 @@ name="insert_question" 	  >
   
   <div class="mdl-card__supporting-text" STYLE="margin-top:15px;">
   
-  <b>Modifier des pays</b>
+  <b>Modifier des questions</b>
   <br><br>
     
 

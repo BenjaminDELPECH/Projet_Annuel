@@ -15,6 +15,7 @@ if (isset($_POST['login_request'])){
 if(isset($result)){
 	$_SESSION['admin_connected']=1;
 	header('location:page_admin.php');
+}else{ echo "<div style='padding:5px;color:red;background-color:#DDCCAA;text-align:center;'>Veillez verifier vos identifiants</div>";
 }
 		
 }

@@ -21,18 +21,18 @@ if(isset($_POST['letter'])){
 $letter=$_POST['letter'];
 }
 
-if(!isset($_SESSION['Pays_choose'])or empty($_SESSION['Pays_choose'])){
-foreach($bdd->query("SELECT count(*)as nb FROM PAYS")as $result_nb){}
+if(!isset($_SESSION['Pays_choose_en'])or empty($_SESSION['Pays_choose_en'])){
+foreach($bdd->query("SELECT count(*)as nb FROM PAYSen")as $result_nb){}
 
 
 $rand=rand(1,$result_nb['nb']);
 
-foreach($bdd->query("SELECT NomPays FROM PAYS where IDPays = '$rand';")as $result){}
+foreach($bdd->query("SELECT NomPays FROM PAYSen LIMIT $rand;")as $result){}
 
-$_SESSION['Pays_choose']= $result['NomPays'];
+$_SESSION['Pays_choose_en']= $result['NomPays'];
 }
 
-$longueur_mot = strlen($_SESSION['Pays_choose']);
+$longueur_mot = strlen($_SESSION['Pays_choose_en']);
 
 if(!isset($_SESSION['score_pendu'])){
 	$_SESSION['score_pendu']=0;
@@ -41,10 +41,10 @@ if(!isset($_SESSION['score_pendu'])){
 <div class="mdl-grid mdl-cell--10-col" id="cadre_pendu1" style="box-shadow:2px 2px 7px black;padding:30px;" >
 <div CLASS="mdl-cell mdl-cell--8-col ">
 <form method="post" action="">
-<label for="letter">Proposez une lettre:</label>
+<label for="letter">Propose a letter:</label>
 <input id="letter" type="text" name="letter" maxlength="1" autofocus></>
 <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect buttonretour2 color-t"
- type="submit" ></>
+ type="submit" value="Valider" ></>
 </form>
 </DIV>
 <div  class="mdl-cell"style="margin-top:10px;font-size:34px;">
@@ -87,7 +87,7 @@ $_SESSION['tab_letter']=$tab_letter;
 $bonne_lettre=FALSE;
 for($i = 1; $i < ($longueur_mot-1); $i++){
 	$existe_deja=False;
-	if ($letter==$_SESSION['Pays_choose'][$i]) {
+	if ($letter==$_SESSION['Pays_choose_en'][$i]) {
 		
 		foreach($tab_ind as $ind){
 			if ($i == $ind){
@@ -117,7 +117,7 @@ if (($taille_tab == ($longueur_mot -2))or ($_SESSION['nb_t_rest']==1)){
 	
 	
 	unset($_SESSION['tableau_indices']);
-	unset($_SESSION['Pays_choose']);
+	unset($_SESSION['Pays_choose_en']);
 	
 	
 }
@@ -148,17 +148,17 @@ header('location:pendu.php');
 		<div class="mdl-cell mdl-cell--4-col" STYLE="font-size:40px;">
 <?php
 	
-echo $_SESSION['Pays_choose'][0];
+echo $_SESSION['Pays_choose_en'][0];
 for($i = 1; $i <($longueur_mot-1); $i++){
 	$verif=FALSE;
 	foreach($tab_ind as $indice){
 	if($i == $indice) { 
-	echo $_SESSION['Pays_choose'][$i];
+	echo $_SESSION['Pays_choose_en'][$i];
 	$verif = TRUE;}
 	}
 	if ($verif ==FALSE){ echo " - ";}
 	} 	
-echo $_SESSION['Pays_choose'][($longueur_mot-1)];
+echo $_SESSION['Pays_choose_en'][($longueur_mot-1)];
 
 ?></div>
 	
@@ -167,7 +167,7 @@ echo $_SESSION['Pays_choose'][($longueur_mot-1)];
 
  
 
- <div  id="cadre_pendu3"> <div style="font-size:27px;">Lettres déjà choisies:</div>
+ <div  id="cadre_pendu3"> <div style="font-size:27px;">Letters choosen:</div>
  <div style="margin-top:22px;font-size:30px;">
  <?php foreach($tab_letter as $let){
 	 echo $let." ";

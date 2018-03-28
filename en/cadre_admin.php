@@ -14,7 +14,7 @@
   
   
   <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Insèrer/modifier une question</h2>
+    <h2 class="mdl-card__title-text">Insert/Edit a question</h2>
   </div>
   
     <div class="mdl-card__supporting-text">
@@ -38,7 +38,7 @@
     <td> 
 		<div class="mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label"  style="width:250px;">
     <input class="mdl-textfield__input" type="text" id="sample3" name="Reponse" VALUE="">
-    <label class="mdl-textfield__label" for="sample3">Réponse..</label>
+    <label class="mdl-textfield__label" for="sample3">Answer..</label>
   </div></td>
   
   
@@ -64,14 +64,14 @@ name="insert_question" 	  >
   
   <div class="mdl-card__supporting-text" STYLE="margin-top:15px;">
   
-  <b>Modifier des pays</b>
+  <b>Edit questions</b>
   <br><br>
     
 
       
 		
 		
-		<?php foreach($bdd->query("SELECT * FROM questions")as $result){	?>
+		<?php foreach($bdd->query("SELECT * FROM questionsen")as $result){	?>
 		<form method="POST" action="">
 	<input type="hidden" name="IDQuestion" value="<?php echo $result['IDQuestion'];?>"></input>
 	
@@ -140,11 +140,11 @@ name="insert_question" 	  >
   
   
   <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Insèrer/modifier un pays</h2>
+    <h2 class="mdl-card__title-text">Insert/Edit a country</h2>
   </div>
   
     <div class="mdl-card__supporting-text">
-<b>Indiquez les informations du Pays à ajouter ( Population et PIB : 53,543,345 = 53M, 67,543 = 68K) (IDH : 0.8957 = 0.9)</b>
+<b>.. Write new country informations ( Population and GDP : 53,543,345 = 53M, 67,543 = 68K) (HDI : 0.8957 = 0.9)</b>
   <br><br>
     
 	
@@ -158,19 +158,19 @@ name="insert_question" 	  >
 	<tr><td> 
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" id="sample3" name="NomPays" VALUE="">
-    <label class="mdl-textfield__label" for="sample3">NomPays...</label>
+    <label class="mdl-textfield__label" for="sample3">CountryName...</label>
   </div></td>
   
     <td> 
 		<div class="mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" id="sample3" name="Capitale"VALUE="">
-    <label class="mdl-textfield__label" for="sample3">Capitale..</label>
+    <label class="mdl-textfield__label" for="sample3">Capital..</label>
   </div></td>
   
   <td> 
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" id="sample3" name="Langue"VALUE="">
-    <label class="mdl-textfield__label" for="sample3">Langue...</label>
+    <label class="mdl-textfield__label" for="sample3">Language..</label>
   </div></td>
   
   <td> 
@@ -182,19 +182,19 @@ name="insert_question" 	  >
   <td> 
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" id="sample3" name="DateEntreeUE"VALUE="">
-    <label class="mdl-textfield__label" for="sample3">Année d'entrée UE...</label>
+    <label class="mdl-textfield__label" for="sample3">UE entry date...</label>
   </div></td>
   
   <td> 
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" id="sample3" name="PIB"VALUE="">
-    <label class="mdl-textfield__label" for="sample3">PIB/hab...</label>
+    <label class="mdl-textfield__label" for="sample3">GDP/hab...</label>
   </div></td>
   
    <td> 
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <input class="mdl-textfield__input" type="text" id="sample3" name="IDH">
-    <label class="mdl-textfield__label" for="sample3">IDH...</label>
+    <label class="mdl-textfield__label" for="sample3">HDI...</label>
   </div></td>
 	</tr>
 	
@@ -218,32 +218,32 @@ name="insert_pays" 	  >
   
   <div class="mdl-card__supporting-text" STYLE="margin-top:15px;">
   
-  <b>Modifier des pays</b>
+  <b>Update countries</b>
   <br><br>
     
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-	<b>Pays</b>
+	<b>Country</b>
    </div>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-	<b>Capitale</b>
+	<b>Capital</b>
    </div>
    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-	<b>Langue</b>
+	<b>Language</b>
    </div>
    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 	<b>Population</b>
    </div>
    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:150px;">
-	<b>Année d'entrée dans l'UE</b>
+	<b>UE entry date</b>
    </div>
    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-	<b>PIB</b>
+	<b>GDP</b>
    </div>
    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-	<b>IDH</b>
+	<b>HDI</b>
    </div>
-        <?php foreach($bdd->query("SELECT * FROM pays")as $result_pays){	?>
+        <?php foreach($bdd->query("SELECT * FROM paysen")as $result_pays){	?>
 		<form method="POST" action="">
 		
 	<input type="hidden" name="IDPays" value="<?php echo $result_pays['IDPays'];?>"></input>

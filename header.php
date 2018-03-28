@@ -35,17 +35,7 @@
       
     </div>
   </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Menu</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="menujeux.php">Jouer</a>
-      <a class="mdl-navigation__link" href="../index.php">Langue</a>
-      <a class="mdl-navigation__link" href="page_pseudo.php">Pseudo</a>
-	   <a class="mdl-navigation__link" href="page_login_admin.php">Admin</a>
-	  
- 
-    </nav>
-  </div>
+  
   <main class="mdl-layout__content">
   
     <div class="mdl-grid">
